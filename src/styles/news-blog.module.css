@@ -1,0 +1,21 @@
+.blog {
+  overflow: hidden;
+  margin: 20px auto;
+  width: 60%;
+  background-color: rgb(65, 58, 58);
+  border-radius: 10px;
+}
+
+.title_news {
+  margin: 5px;
+  text-align: center;
+}
+
+.info_news {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info_text {
+  margin: 10px;
+}
