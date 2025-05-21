@@ -4,8 +4,6 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,4 +13,14 @@
 
 body {
   margin: 0;
+  background-color: var(--colors-bg);
+  color: rgba(255, 255, 255, 0.87);
+}
+
+body[data-theme = 'dark'] {
+  --colors-bg: #242424;
+}
+
+body[data-theme='light'] {
+  --colors-bg: #ffffff;
 }

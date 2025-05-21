@@ -1,8 +1,13 @@
+import { useAppSelector } from '../utils/reduxHooks';
+
 import style from '../styles/news-blog.module.css'
 
 export const NewsBlog = () => {
+  const theme = useAppSelector(state => state.theme)
+  const themeChange = theme === 'dark' ? style.blogDark : style.blogLight
+
   return (
-    <div className={style.blog}>
+    <div className={`${style.blog} ${themeChange}`}>
       <h2 className={style.title_news}>Название статьи</h2>
       <div className={style.info_news}>
         <p className={style.info_text}>Рейтинг статьи</p>

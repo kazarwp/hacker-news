@@ -2,8 +2,16 @@
   overflow: hidden;
   margin: 20px auto;
   width: 60%;
-  background-color: rgb(65, 58, 58);
   border-radius: 10px;
+}
+
+.blogDark {
+  background-color: rgb(65, 58, 58);
+}
+
+.blogLight {
+  background-color: rgb(242, 228, 228);
+  color: black;
 }
 
 .title_news {
