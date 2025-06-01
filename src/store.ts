@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { themeReducer } from "./features/theme/theme-slice";
+import { newsApi } from "./features/news/news-slice";
 
 export const store = configureStore({
   reducer: {
-    theme: themeReducer
+    theme: themeReducer,
+    [newsApi.reducerPath]: newsApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(newsApi.middleware),
   devTools: true,
 });
 
